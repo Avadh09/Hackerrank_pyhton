@@ -1,0 +1,41 @@
+Que :Arrays: Left Rotation
+
+program : 
+
+def array_left_rotation(a, n, k):
+    
+    count=k;
+    list=[]
+    if k>=n :
+        return a
+    else:  
+        if len(list)<=n:
+            for nums in range(count,n):
+              list.append(a[nums])
+            for nums in range(k):
+              list.append(a[nums])
+             
+            
+          
+                  
+    return list
+              
+            
+           
+          
+n, k = map(int, raw_input().strip().split(' '))
+a = map(int, raw_input().strip().split(' '))
+answer = array_left_rotation(a, n, k);
+print ' '.join(map(str,answer))
+
+
+
+
+Sample Input
+
+5 4
+1 2 3 4 5
+
+Sample Output
+
+5 1 2 3 4
