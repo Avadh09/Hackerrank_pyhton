@@ -1,0 +1,92 @@
+The first line contains an integer N, the total number of students. 
+The second line contains the names of the columns in any order. 
+The next  lines contains the NAME,ID ,MARKS  and CLASS, under their respective column names.
+
+Constraints
+
+
+Output Format
+
+Print the average marks of the list corrected to 2 decimal places.
+
+
+Sample Input
+
+TESTCASE 01
+
+5
+ID         MARKS      NAME       CLASS     
+1          97         Raymond    7         
+2          50         Steven     4         
+3          91         Adrian     9         
+4          72         Stewart    5         
+5          80         Peter      6   
+TESTCASE 02
+
+5
+MARKS      CLASS      NAME       ID        
+92         2          Calum      1         
+82         5          Scott      2         
+94         2          Jason      3         
+55         8          Glenn      4         
+82         2          Fergus     5
+Sample Output
+
+TESTCASE 01
+
+78.00
+TESTCASE 02
+
+81.00
+Explanation
+
+TESTCASE 01
+
+Average = 
+
+Can you solve this challenge in 4 lines of code or less? 
+NOTE: There is no penalty for solutions that are correct but have more than 4 lines.
+
+Easy
+Submitted 5889 times
+Max Score 20
+Need Help?
+
+View Discussions
+View Editorial Solution
+View Top Submissions
+Rate This Challenge:
+Download problem statement
+Download sample test cases
+Suggest Edits
+Current Buffer (saved locally, editable)      
+Python 2
+
+ 
+float
+1
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+2
+from collections import namedtuple
+3
+total_student=input()
+4
+colms=raw_input().split()
+5
+students=namedtuple('student',colms)
+6
+total=0
+7
+for colm in range(0,total_student):
+8
+  colm1,colm2,colm3,colm4=raw_input().split()
+9
+  student=students(colm1,colm2,colm3,colm4)
+10
+  total+=float(student.MARKS)
+11
+print float(total/total_student)
+12
+ 
+13
+​
